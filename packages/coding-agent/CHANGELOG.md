@@ -45,6 +45,9 @@
 - `/debug` memory reports now keep large heap snapshots out of JavaScript strings and reject empty snapshots instead of saving zero-byte files ([#11785](https://github.com/can1357/oh-my-pi/issues/11785)).
 - Sloppy-mode edits now drop a copied `[N more lines in ...]` read notice the same way they already drop the other read-metadata rows, so a pasted projection can no longer leak into the matched pattern or the written text ([#11797](https://github.com/can1357/oh-my-pi/pull/11797) by [@vasyza](https://github.com/vasyza)).
 - `/usage` now honors a provider's configured `baseUrl` when checking credentials before any model has been discovered, so a proxy-scoped API key is no longer sent to the provider's canonical host ([#11656](https://github.com/can1357/oh-my-pi/pull/11656) by [@oldschoola](https://github.com/oldschoola)).
+### Added
+
+- Added OpenAI cloud speech-to-text for push-to-talk dictation, with ChatGPT subscription and API-key authentication ([#11216](https://github.com/can1357/oh-my-pi/pull/11216) by [@rxaviers](https://github.com/rxaviers)).
 
 ## [18.1.18] - 2026-09-11
 
@@ -72,7 +75,6 @@
 - Hiding tool activity (its shortcut or `display.hideToolActivity` in `/settings`) now replays native history, so blocks already retired to the terminal hide on the same keypress instead of waiting for another display toggle ([#11734](https://github.com/can1357/oh-my-pi/pull/11734) by [@notnotype](https://github.com/notnotype)).
 - `#readProjectSettings` now logs capability warnings when a project `.claude/settings.json` fails to parse, instead of silently dropping them ([#11570](https://github.com/can1357/oh-my-pi/issues/11570)).
 - A malformed project `.claude/settings.json` now produces a warning instead of being silently ignored ([#11570](https://github.com/can1357/oh-my-pi/issues/11570)).
-- Added OpenAI cloud speech-to-text for push-to-talk dictation, with ChatGPT subscription and API-key authentication ([#11216](https://github.com/can1357/oh-my-pi/pull/11216) by [@rxaviers](https://github.com/rxaviers)).
 
 ### Fixed
 
